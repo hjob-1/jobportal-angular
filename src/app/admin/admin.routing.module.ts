@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Home } from './pages/home/home.component';
+import { AdminComponent } from './admin.component';
+
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () =>
-      import('./client/client.module').then((m) => m.ClientModule),
-  },
-  {
+    component: AdminComponent,
     path: 'admin',
-    loadChildren: () =>
-      import('./admin/admin.module').then((m) => m.AdminModule),
+    pathMatch: 'full',
   },
 ];
 
@@ -17,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AdminRoutingModule {}
