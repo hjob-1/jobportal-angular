@@ -39,7 +39,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDialogModule,
     MatButtonModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [JobService],
   bootstrap: [AppComponent],
