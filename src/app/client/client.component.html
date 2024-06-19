@@ -1,2 +1,4 @@
-<app-client-navbar></app-client-navbar>
-<router-outlet></router-outlet>
+<app-client-hero></app-client-hero>
+<main>
+  <app-jobList *ngFor="let job of jobs" [job]="job"></app-jobList>
+</main>
